@@ -36,12 +36,12 @@ form.addEventListener("submit", async (e) => {
       fecha
     });
 
-    msg.textContent = "✅ Mensaje enviado con éxito";
+    msg.textContent = "Mensaje enviado con éxito";
     msg.style.color = "lightgreen";
     form.reset();
   } catch (error) {
     console.error("Error al enviar mensaje: ", error);
-    msg.textContent = "❌ Hubo un error al enviar tu mensaje";
+    msg.textContent = " Hubo un error al enviar tu mensaje";
     msg.style.color = "red";
   }
 });

@@ -1,4 +1,4 @@
-/* Variables(colores)  */
+
 :root{
   --color-dark: #0A0B0D;
   --color-secondary: #273240;
@@ -10,8 +10,6 @@
   --max-width: 1100px;
 }
 
-
-/* 🔹 Modal para ampliar certificados====================== */
 .modal {
      display: none;
     position: fixed;
@@ -44,14 +42,13 @@
     position: absolute;
     top: 20px;
     right: 35px;
-    color: aqua; /*estos colores no los encuentro para cambiar*/
+    color: aqua; 
     font-size: 40px;
     cursor: pointer;
     transition: 0.3s;
 }
   
-/*================================================*/
-/* Reset suave */
+
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
@@ -63,9 +60,7 @@ body{
   -moz-osx-font-smoothing:grayscale;
   line-height:1.5;
 }
-/*=====================================================*/
-/* --- Sección Herramientas --- */
-/* Contenedores */
+
 .herramientas, .idiomas, .habilidades {
   margin-bottom: 30px;
   background: var(--color-dark);
@@ -73,7 +68,7 @@ body{
 
 }
 
-/* --- Herramientas --- */
+
 .herramienta {
   margin: 15px 0;
 }
@@ -98,7 +93,6 @@ body{
   transition: width 1s ease-in-out;
 }
 
-/* --- Idiomas --- */
 .idiomas ul {
   list-style: none;
   padding: 0;
@@ -119,27 +113,25 @@ body{
   color: var(--color-light);
 }
 
-/*==============================================*/
-/* Contenedor principal */
+
 .container{
   max-width:var(--max-width);
   margin:0 auto;
   padding:1rem;
 }
 
-/* NAVBAR */
-/* ===== Navbar centrado y moderno ===== */
+
 .navbar {
   width: 100%;
-  background: transparent; /* puedes poner un degradado si quieres */
+  background: transparent; 
   position: sticky;
   top: 0;
   z-index: 60;
   padding: 12px 0;
-  backdrop-filter: blur(6px); /* elegante */
+  backdrop-filter: blur(6px); 
 }
 
-/* caja interna centrada */
+
 .nav-inner{
   max-width: var(--max-width);
   margin: 0 auto;
@@ -153,7 +145,6 @@ body{
   box-shadow: 0 6px 18px rgba(0,0,0,0.45);
 }
 
-/* logo */
 .logo{
   color: var(--text-light);
   text-decoration: none;
@@ -162,7 +153,6 @@ body{
   letter-spacing: 0.4px;
 }
 
-/* nav links (desktop) */
 .nav-links{
   list-style: none;
   display:flex;
@@ -172,7 +162,7 @@ body{
   align-items:center;
 }
 
-/* link style */
+
 .nav-link{
   display:inline-block;
   color: var(--text-light);
@@ -184,30 +174,29 @@ body{
   position: relative;
 }
 
-/* hover / active */
+
 .nav-link:hover{
   color: var(--color-dark);
   background: var(--color-light);
   transform: translateY(-2px);
 }
 
-/* indicador de link activo (puedes mover clase .active) */
 .nav-link.active{
   background: linear-gradient(90deg, var(--color-accent), var(--color-light));
   color: var(--color-dark);
   box-shadow: 0 6px 14px rgba(104,142,166,0.12);
 }
 
-/* hamburger button */
+
 .menu-toggle{
-  display:none; /* se muestra en mobile */
+  display:none; 
   background:transparent;
   border:0;
   cursor:pointer;
   padding:8px;
 }
 
-/* barra icon (hamburger) */
+
 .hamburger{
   display:block;
   width:22px;
@@ -230,7 +219,7 @@ body{
 .hamburger::before{ top:-7px; }
 .hamburger::after{ top:7px; }
 
-/* estado abierto del botón */
+
 .menu-toggle.open .hamburger{
   background: transparent;
 }
@@ -241,7 +230,7 @@ body{
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Mobile: menu en columna */
+
 @media (max-width: 880px){
   .menu-toggle{ display:block; }
 
@@ -274,12 +263,10 @@ body{
     display:block;
   }
 
-  /* para que el .nav-inner mantenga espacio en mobile */
   .nav-inner { padding: 10px 14px; }
 }
 
 
-/* CV Layout: left (info) + right (contenido) */
 .cv-container{
   display:grid;
   grid-template-columns: 320px 1fr;
@@ -287,7 +274,7 @@ body{
   margin-top:1.25rem;
 }
 
-/* LEFT */
+
 .cv-left{
   background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.04));
   padding:1rem;
@@ -304,7 +291,7 @@ body{
   border:3px solid var(--color-accent);
 }
 
-/* Contact-card y boton */
+
 .contact-card h3{margin:.2rem 0 0; font-size:1.25rem}
 .role{color:var(--color-accent); margin:0.25rem 0 0.6rem}
 .btn{
@@ -318,7 +305,7 @@ body{
   margin-top:0.6rem;
 }
 
-/* Side sections (habilidades, certificados) */
+
 .side-section{margin-top:1rem}
 .side-section h4{margin:0 0 .6rem 0; border-bottom:2px solid rgba(255,255,255,0.03); padding-bottom:0.4rem}
 
@@ -336,7 +323,7 @@ body{
   border-radius:6px;
   font-size:0.9rem;
 }
-/* Grid de habilidades */
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -357,7 +344,7 @@ body{
   transform: scale(1.05);
 }
 
-/* Modal de Proyectos */
+
 .modal-proyectos {
   display: none;
   position: fixed;
@@ -395,7 +382,7 @@ body{
 
 
 
-/* Certificados: grid y tarjeta */
+
 .certificados {
   padding: 2rem;
   text-align:start ;
@@ -495,14 +482,14 @@ body{
     transition: transfom 0.3s ease;
 }
 
-/* RIGHT: contenido principal (hero, secciones) */
+
 .cv-right{padding:0 0.5rem}
 .hero{padding:0.5rem 0}
 .hero h1{margin:.2rem 0; font-size:2rem}
 .hero h2{margin:0; font-weight:300; color:var(--color-accent)}
 .lead{margin-top:.6rem; max-width:60ch; color:var(--color-light); opacity:.95}
 
-/* Secciones de contenido */
+
 .content-section{
   margin-top:1.1rem;
   background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
@@ -512,7 +499,7 @@ body{
 }
 .content-section h3{margin-top:0; color:var(--color-light)}
 
-/* Footer */
+
 .site-footer{
  
   padding:1rem;
@@ -527,7 +514,6 @@ body{
     font-weight: bold;
 }
 
-/* Responsive */
 @media (max-width: 880px){
   .cv-container{grid-template-columns:1fr; padding:0}
   .cv-left{order:2}
@@ -537,7 +523,7 @@ body{
   .nav-links.show{display:flex}
 }
 
-/* 🔹 Formulario de contacto */
+
 .form-card {
   background: var(--color-secondary);
   padding: 2rem;

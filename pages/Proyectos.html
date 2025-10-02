@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Proyectos — Portafolio</title>
+
+  <!-- Mantenemos los mismos estilos -->
+  <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+</head>
+<body>
+  <!-- Reutilizamos el navbar (puedes extraer a un include si usas templating) -->
+  <nav class="navbar" aria-label="Barra de navegación principal">
+    <div class="nav-inner">
+    <a class="logo" href="index.html">MiPortafolio</a>
+
+    <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menú">
+      <span class="hamburger" aria-hidden="true"></span>
+    </button>
+
+    <ul id="nav-links" class="nav-links" role="menu">
+      <li role="none"><a role="menuitem" href="../index.html" class="nav-link">Inicio</a></li>
+      <li role="none"><a role="menuitem" href="Proyectos.html" class="nav-link">Proyectos</a></li>
+      <li role="none"><a role="menuitem" href="contactos.html" class="nav-link">Contacto</a></li>
+    </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+  <h1>Proyectos</h1>
+  <p>En esta sección encontrarás algunos de mis proyectos desarrollados con diferentes tecnologías. Cada uno refleja mi aprendizaje, creatividad y capacidad para resolver problemas. Incluyo ejemplos de código, descripciones técnicas y enlaces a repositorios en GitHub para su revisión..</p>
+
+  <!-- Grid de habilidades -->
+  <section class="skills-grid">
+    <div class="skill-card" data-skill="python" data-github="https://github.com/tuusuario/python-proyecto">
+      <h3>Python</h3>
+    </div>
+    <div class="skill-card" data-skill="java" data-github="https://github.com/tuusuario/java-proyecto">
+      <h3>Java</h3>
+    </div>
+    <div class="skill-card" data-skill="htmlcss" data-github="https://github.com/tuusuario/web-proyecto">
+      <h3>HTML & CSS</h3>
+    </div>
+    <div class="skill-card" data-skill="js" data-github="https://github.com/tuusuario/js-proyecto">
+      <h3>JavaScript</h3>
+    </div>
+  </section>
+</main>
+
+<!-- Modal -->
+
+
+
+   <footer class="site-footer">
+    <p>&copy; 2025 — Carlos Roque</p>
+    <p>Sígueme: <a href="#">GitHub</a> · <a href="#">LinkedIn</a></p>
+  </footer>
+
+    <div id="projectModal" class="modal-proyectos">
+      <div class="modal-proyectos-content">
+        <span class="cerrar-proyectos">&times;</span>
+        <h2 id="modal-title"></h2>
+        <pre id="modal-code"><code>// Aquí irá el código de ejemplo o descripción</code></pre>
+        <a id="modal-github" class="btn" href="#" target="_blank">Ver en GitHub</a>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

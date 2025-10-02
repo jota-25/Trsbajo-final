@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 🔹 Navbar -->
+  <nav class="navbar" aria-label="Barra de navegación principal">
+  <div class="nav-inner">
+    <a class="logo" href="index.html">MiPortafolio</a>
+
+    <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menú">
+      <span class="hamburger" aria-hidden="true"></span>
+    </button>
+
+    <ul id="nav-links" class="nav-links" role="menu">
+      <li role="none"><a role="menuitem" href="../index.html" class="nav-link">Inicio</a></li>
+      <li role="none"><a role="menuitem" href="Proyectos.html" class="nav-link">Proyectos</a></li>
+      <li role="none"><a role="menuitem" href="contactos.html" class="nav-link">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <main class="container">
+    <h1>Contacto</h1>
+    <p>Completa el formulario para enviarme un mensaje:</p>
+
+    <form id="contactForm" class="form-card">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="asunto">Asunto:</label>
+      <input type="text" id="asunto" name="asunto" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+
+    <div id="formMessage" class="msg"></div>
+  </main>
+
+   <footer class="site-footer">
+    <p>&copy; 2025 — Carlos Roque</p>
+    <p>Sígueme: <a href="#">GitHub</a> · <a href="#">LinkedIn</a></p>
+  </footer>
+
+
+  <!-- JS -->
+  <script src="../js/main.js"></script>
+  <script type="module" src="../js/cxn.js"></script>
+</body>
+</html>

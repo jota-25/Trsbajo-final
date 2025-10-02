@@ -1,0 +1,97 @@
+.certificados {
+  padding: 2rem;
+  text-align:start ;
+}
+ 
+.certificados h2{
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+ 
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+.cert-card {
+  width: 250px;
+  height: 180px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+.cert-card div {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+  position: absolute;
+}
+.cert-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+}
+
+.cert-card-inner {
+    transform: rotateY(0deg);  /*solo se muestra la imagen, esto puede ponerse en el inner de arriba pero naaaaaaaaa*/
+}
+/*si se quiere que aparesca primero el h3 pues se cambia el 180deg a 0deg y el mismo con el de abajo de 0deg a 180deg*/
+.cert-card:hover .cert-card-inner {   /*con esto se muetra el h3, pasa de la imagen a el h3*/
+    transform: rotateY(180deg);
+}
+
+ 
+.cert-front, .cert-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden ; /* se elimina esto para que funcione lo del profe*/
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    box-shadow: 0 6px 12px var(--color-accent);
+}
+ 
+.cert-back {
+  background: var(--color-tertiary);
+  color: var(--color-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  transform: rotateY(0deg);
+}
+
+.cert-front h3{
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 2px 6px var(--text-light);
+    margin: 0;
+    transition: transfom 0.3s ease, color 0.3s ease;
+
+}
+ 
+.cert-front h3:hover{
+    transform: scale(1.05);
+    color: var(--text-light);
+}
+.cert-back{
+    background: var(--color-dark);
+    border: 1px solid var( --color-accent);
+    transform: rotateY(180deg);
+}  
+
+.cert-back img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transfom 0.3s ease;
+}
